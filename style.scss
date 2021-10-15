@@ -1,0 +1,50 @@
+body {
+    background-color: #000;
+    color: white;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    perspective-origin: 50% calc(50% - 150px);
+    perspective: 500px;
+} 
+
+.banner {
+    display: flex;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: rotate 24s infinite linear;
+}
+
+@keyframes rotate {
+    to { transform: rotateY(-360deg)}
+}
+
+$width: 51px;
+
+.panel {    
+    position: absolute; 
+    transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(193.5px); //rotacion v2
+    width: $width;
+    height: 115px;
+    // border: 1px solid white;
+    //background-color: #fff4;
+    overflow: hidden;
+}
+
+.panel::before {
+    position: absolute;
+    left: var(--left);
+    content: 'Buen dia bbs, disfruten el dia!';
+    font-size: 100px;
+    width: max-content;
+    color: hsl(var(--hue), 75%, 75%);
+}
+
+@for $i from 0 to 24 {
+    .panel:nth-child(#{$i + 1}) {
+        --left: #{$width * $i * -1}; //si no hacemos esto, en cada cuadrado se va a iniciar el content. al poner esto se atrasa cada cuadrado automaticamente para que el texto encaje perfecto, 
+        --hue: #{360 / 24 * $i}; // colorea el texto. color to the text
+        // --top: #{random(30)}px;
+        --angle: #{360deg / 24 * $i} /*aca vamos a desarrollar la rotacion v2 */
+    }
+}

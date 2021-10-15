@@ -1,0 +1,202 @@
+body {
+  background-color: #000;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  -webkit-perspective-origin: 50% calc(50% - 150px);
+          perspective-origin: 50% calc(50% - 150px);
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: rotate 24s infinite linear;
+          animation: rotate 24s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+  }
+}
+.panel {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(193.5px);
+          transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(193.5px);
+  width: 51px;
+  height: 115px;
+  overflow: hidden;
+}
+
+.panel::before {
+  position: absolute;
+  left: var(--left);
+  content: "Buen dia bbs, disfruten el dia!";
+  font-size: 100px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: hsl(var(--hue), 75%, 75%);
+}
+
+.panel:nth-child(1) {
+  --left: 0px;
+  --hue: 0;
+  --angle: 0deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(2) {
+  --left: -51px;
+  --hue: 15;
+  --angle: 15deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(3) {
+  --left: -102px;
+  --hue: 30;
+  --angle: 30deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(4) {
+  --left: -153px;
+  --hue: 45;
+  --angle: 45deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(5) {
+  --left: -204px;
+  --hue: 60;
+  --angle: 60deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(6) {
+  --left: -255px;
+  --hue: 75;
+  --angle: 75deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(7) {
+  --left: -306px;
+  --hue: 90;
+  --angle: 90deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(8) {
+  --left: -357px;
+  --hue: 105;
+  --angle: 105deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(9) {
+  --left: -408px;
+  --hue: 120;
+  --angle: 120deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(10) {
+  --left: -459px;
+  --hue: 135;
+  --angle: 135deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(11) {
+  --left: -510px;
+  --hue: 150;
+  --angle: 150deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(12) {
+  --left: -561px;
+  --hue: 165;
+  --angle: 165deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(13) {
+  --left: -612px;
+  --hue: 180;
+  --angle: 180deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(14) {
+  --left: -663px;
+  --hue: 195;
+  --angle: 195deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(15) {
+  --left: -714px;
+  --hue: 210;
+  --angle: 210deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(16) {
+  --left: -765px;
+  --hue: 225;
+  --angle: 225deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(17) {
+  --left: -816px;
+  --hue: 240;
+  --angle: 240deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(18) {
+  --left: -867px;
+  --hue: 255;
+  --angle: 255deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(19) {
+  --left: -918px;
+  --hue: 270;
+  --angle: 270deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(20) {
+  --left: -969px;
+  --hue: 285;
+  --angle: 285deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(21) {
+  --left: -1020px;
+  --hue: 300;
+  --angle: 300deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(22) {
+  --left: -1071px;
+  --hue: 315;
+  --angle: 315deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(23) {
+  --left: -1122px;
+  --hue: 330;
+  --angle: 330deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
+
+.panel:nth-child(24) {
+  --left: -1173px;
+  --hue: 345;
+  --angle: 345deg /*aca vamos a desarrollar la rotacion v2 */ ;
+}
